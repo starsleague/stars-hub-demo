@@ -3,6 +3,8 @@
 // (reintegrate da stars-hub-v8.html: nel v7 il markup esisteva
 //  ma le funzioni non erano mai state definite)
 // ====================================================
+const EV_BG={fast:'linear-gradient(135deg,#1E314A,#2a4266)',open:'linear-gradient(135deg,#c98e00,#F7A800)',camp:'linear-gradient(135deg,#22a96e,#0d5c38)',corso:'linear-gradient(135deg,#3b82f6,#1e40af)',altro:'linear-gradient(135deg,#899CB5,#4a637d)'};
+const EV_LBL={fast:'&#9889; Torneo Fast',open:'&#127942; Torneo Open',camp:'&#128203; Campionato',corso:'&#128218; Corso',altro:'&#128197; Evento'};
 let editEvId=null;
 
 function openNewEvent(tipo='fast'){
