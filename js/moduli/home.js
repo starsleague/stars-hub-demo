@@ -142,6 +142,15 @@ function renderHomeCalGrid(){
   }
 }
 
+function toggleCampiLive(){
+  var list  = document.getElementById('campi-live-scroll');
+  var arrow = document.getElementById('campi-live-toggle-arrow');
+  if(!list) return;
+  var isOpen = list.style.display !== 'none';
+  list.style.display = isOpen ? 'none' : 'flex';
+  if(arrow) arrow.innerHTML = isOpen ? '&#9654; Mostra' : '&#9660; Nascondi';
+}
+
 function toggleWaitingPanel(){
   var list  = document.getElementById('waiting-pren-list');
   var arrow = document.getElementById('waiting-toggle-arrow');
@@ -213,7 +222,15 @@ function renderCampiLive(){
   var wrap = document.getElementById('campi-live-scroll');
   if(!wrap) return;
   wrap.innerHTML = '';
-  if(!DB.campi.length) return;
+  if(!DB.campi.length){
+    wrap.innerHTML = '<div class="empty" style="padding:32px 16px;text-align:center">'+
+      '<div class="empty-ic" style="font-size:28px">&#127967;</div>'+
+      '<div class="empty-t" style="margin:8px 0 4px">Nessun campo configurato</div>'+
+      '<div style="font-size:11px;color:var(--text3);margin-bottom:12px">Aggiungi i campi per vedere il planner e registrare le prenotazioni.</div>'+
+      '<button class="btn btn-primary btn-sm" onclick="nav(\'campi\',null)">Configura i campi &#8594;</button>'+
+      '</div>';
+    return;
+  }
 
   var now  = new Date();
   var nowM = now.getHours()*60 + now.getMinutes();
@@ -335,11 +352,12 @@ function renderCampiLive(){
       timerTxt.textContent = '⏱ ' + rim + ' min (' + _fmtOreParens(rim) + ')';
       timerEl.appendChild(timerTxt);
     } else if(prossima){
+      // Campo libero: il tempo va accanto al pallino (stessa resa dell'occupato)
       var libPer = toM(prossima.inizio) - nowM;
-      var timerTxt = document.createElement('span');
-      timerTxt.style.cssText = 'font-size:11px;font-weight:600;color:#22a96e';
-      timerTxt.textContent = libPer + ' min (' + _fmtOreParens(libPer) + ')';
-      timerEl.appendChild(timerTxt);
+      var libTxt = document.createElement('span');
+      libTxt.style.cssText = 'font-size:13px;font-weight:800;color:' + accentCol + ';font-family:var(--mono)';
+      libTxt.textContent = libPer + ' min (' + _fmtOreParens(libPer) + ')';
+      statoWrap.appendChild(libTxt);
     }
 
     // Prossima prenotazione

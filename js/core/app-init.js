@@ -2,7 +2,7 @@
 // NAV
 // ====================================================
 // NAV è definito sotto con tutte le sezioni aggiornate
-const PTITLES={home:'Home',planner:'Agenda / Planner',tornei:'Tornei ed Eventi',corsi:'Corsi e Lezioni',campi:'Campi',giocatori:'Giocatori',personale:'Personale & Turni',abbonamenti:'Abbonamenti','asd-home':'ASD Dashboard','asd-soci':'Libro Soci','asd-bilancio':'Bilancio ASD','asd-docs':'Doc. e Scadenze','asd-assemblee':'Assemblee ASD','calendario-centro':'Calendario Centro','coach-hub':'Coach Hub',cassa:'Cassa',shop:'Shop','shop-cart':'Carrello',chat:'Chat',statistiche:'Statistiche',notifiche:'Notifiche',ruoli:'Ruoli & Accessi',impostazioni:'Impostazioni'};
+const PTITLES={home:'Home',classifiche:'Classifiche',planner:'Agenda / Planner',tornei:'Tornei ed Eventi',corsi:'Corsi e Lezioni',campi:'Campi',giocatori:'Giocatori',personale:'Personale & Turni',abbonamenti:'Abbonamenti','asd-home':'ASD Dashboard','asd-soci':'Libro Soci','asd-bilancio':'Bilancio ASD','asd-docs':'Doc. e Scadenze','asd-assemblee':'Assemblee ASD','calendario-centro':'Calendario Centro','coach-hub':'Coach Hub',cassa:'Cassa',shop:'Shop','shop-cart':'Carrello',chat:'Chat',statistiche:'Statistiche',notifiche:'Notifiche',ruoli:'Ruoli & Accessi',impostazioni:'Impostazioni'};
 
 document.querySelectorAll('.modal-overlay').forEach(o=>o.addEventListener('click',function(e){if(e.target===this)this.classList.remove('open');}));
 // Confirm
@@ -166,6 +166,7 @@ function nav(p,el){
   if(p==='asd-home') renderAsdHome();
   if(p==='ruoli') renderRuoli();
   if(p==='notifiche') renderNotifiche();
+  if(p==='classifiche') renderHomeRanking();
   if(p==='statistiche') renderStatistiche();
   if(p==='calendario-centro') renderCC();
   if(p==='asd-assemblee') renderAssemblee();
