@@ -97,10 +97,9 @@ function renderHomeCampi(){
       <div style="font-size:9px;color:var(--text3)">${c.sport} · ${c.tipo}</div>
       ${dettaglio}
     </div>`;
+}).join('');
+}
 
-// ====================================================
-// SWITCH TAB STATISTICHE HOME
-// ====================================================
 function switchStatsTab(tab, btn){
   ['home-stats-day','home-stats-week','home-stats-month'].forEach(id=>{
     const el=document.getElementById(id); if(el) el.style.display='none';
@@ -236,14 +235,4 @@ function renderHomeClassifica(){
     const livello=g?g.livello:'';
     return `<div style="display:flex;align-items:center;gap:9px;padding:6px 0;border-bottom:.5px solid var(--bdr2)"><div style="width:22px;text-align:center;font-size:${i<3?14:11}px">${MEDALS[i]||'<span style=color:var(--text3)>'+(i+1)+'</span>'}</div><div style="flex:1"><div style="font-size:12px;font-weight:500">${nome}</div>${livello?`<div style="font-size:10px;color:var(--text3)">Livello ${livello}</div>`:''}</div><div style="font-size:11px;font-weight:700;color:var(--gold)">${partite} 🎾</div></div>`;
   }).join('');
-}
-
-
-// === CASSA ===
-
-// ============================================================
-// Cassa & movimenti
-// ============================================================
-
-}).join('');
 }

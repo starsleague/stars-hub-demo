@@ -406,15 +406,15 @@
         },
         {
           "giocatore_id": 302,
-          "pagato": "acconto"
-        },
-        {
-          "giocatore_id": 303,
           "pagato": "saldato"
         },
         {
-          "giocatore_id": 304,
+          "giocatore_id": 303,
           "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 304,
+          "pagato": "saldato"
         },
         {
           "giocatore_id": 307,
@@ -426,7 +426,7 @@
         },
         {
           "giocatore_id": 310,
-          "pagato": "acconto"
+          "pagato": "saldato"
         },
         {
           "giocatore_id": 311,
@@ -446,11 +446,11 @@
         },
         {
           "giocatore_id": 318,
-          "pagato": "acconto"
+          "pagato": "saldato"
         },
         {
           "giocatore_id": 319,
-          "pagato": "saldato"
+          "pagato": "acconto"
         },
         {
           "giocatore_id": 321,
@@ -484,7 +484,7 @@
         },
         {
           "giocatore_id": 306,
-          "pagato": "saldato"
+          "pagato": "acconto"
         },
         {
           "giocatore_id": 309,
@@ -496,7 +496,7 @@
         },
         {
           "giocatore_id": 317,
-          "pagato": "acconto"
+          "pagato": "saldato"
         },
         {
           "giocatore_id": 322,
@@ -526,7 +526,7 @@
       "iscritti": [
         {
           "giocatore_id": 312,
-          "pagato": "acconto"
+          "pagato": "saldato"
         },
         {
           "giocatore_id": 320,
@@ -552,15 +552,15 @@
       "iscritti": [
         {
           "giocatore_id": 301,
-          "pagato": "saldato"
+          "pagato": "acconto"
         },
         {
           "giocatore_id": 302,
-          "pagato": "saldato"
+          "pagato": "acconto"
         },
         {
           "giocatore_id": 303,
-          "pagato": "acconto"
+          "pagato": "saldato"
         },
         {
           "giocatore_id": 304,
@@ -576,15 +576,15 @@
         },
         {
           "giocatore_id": 310,
-          "pagato": "saldato"
+          "pagato": "acconto"
         },
         {
           "giocatore_id": 311,
-          "pagato": "acconto"
+          "pagato": "saldato"
         },
         {
           "giocatore_id": 313,
-          "pagato": "acconto"
+          "pagato": "saldato"
         },
         {
           "giocatore_id": 315,
@@ -600,11 +600,11 @@
         },
         {
           "giocatore_id": 319,
-          "pagato": "acconto"
+          "pagato": "saldato"
         },
         {
           "giocatore_id": 321,
-          "pagato": "acconto"
+          "pagato": "saldato"
         },
         {
           "giocatore_id": 323,
@@ -612,7 +612,7 @@
         },
         {
           "giocatore_id": 324,
-          "pagato": "saldato"
+          "pagato": "acconto"
         }
       ]
     },
@@ -634,11 +634,11 @@
         },
         {
           "giocatore_id": 302,
-          "pagato": "saldato"
+          "pagato": "acconto"
         },
         {
           "giocatore_id": 303,
-          "pagato": "acconto"
+          "pagato": "saldato"
         },
         {
           "giocatore_id": 304,
@@ -646,11 +646,11 @@
         },
         {
           "giocatore_id": 305,
-          "pagato": "acconto"
+          "pagato": "saldato"
         },
         {
           "giocatore_id": 306,
-          "pagato": "acconto"
+          "pagato": "saldato"
         }
       ]
     }

@@ -36,15 +36,3 @@ if(idx>=0) DB.sport.splice(idx,1);
   else DB.sport.push(sport);
   saveDB(); buildSportTabs(); fillSelects(); showToast(sport+(DB.sport.includes(sport)?' attivato':' disattivato'));
 }
-
-function initApp(){
-  updateSidebar(); renderCampi(); renderGiocatori(); renderEventi(); renderCorsi(); renderStaff(); renderTodo();
-  buildSportTabs(); fillSelects(); fillImpostazioni(); updateKpi(); updateTopbar();
-  plannerDate=_initPlannerDate(); plannerMode='day'; renderPlanner();
-  renderCassa(); renderAbbonamenti(); renderAsdHome(); renderAsdSoci(); renderAsdBilancio(); renderAsdDocs(); renderRuoli();
-  initWaBtn();
-  renderNotifiche(); aggiornaNotifBadge();
-  updateStarsCoin(); updCartUI(); renderShopProdotti();
-  initTurniWeek();
-  renderCC(); renderAssemblee(); renderCoachHub();
-}

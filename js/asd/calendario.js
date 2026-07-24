@@ -16,19 +16,6 @@ const CC_TYPES={
 
 if(!DB.calendario_centro) DB.calendario_centro=[];
 
-function ccSetView(v,btn){
-  ccView=v;
-  document.getElementById('cc-cal-wrap').style.display=v==='month'?'':'none';
-  document.getElementById('cc-list-wrap').style.display=v==='list'?'':'none';
-  document.querySelectorAll('#cc-view-month,#cc-view-list').forEach(b=>{b.style.background='';b.style.color='';b.classList.add('btn-ghost');b.classList.remove('btn-navy');});
-  btn.classList.remove('btn-ghost'); btn.style.background='var(--navy)'; btn.style.color='#fff';
-  renderCC();
-}
-
-function ccPrev(){if(ccView==='month')ccDate.setMonth(ccDate.getMonth()-1);else ccDate.setMonth(ccDate.getMonth()-1);renderCC();}
-
-function ccNext(){if(ccView==='month')ccDate.setMonth(ccDate.getMonth()+1);else ccDate.setMonth(ccDate.getMonth()+1);renderCC();}
-
 function renderCC(){
   if(!DB.calendario_centro) DB.calendario_centro=[];
   const lbl=document.getElementById('cc-lbl'); if(!lbl)return;
@@ -38,6 +25,19 @@ function renderCC(){
   const filtered=DB.calendario_centro.filter(e=>!flt||e.tipo===flt);
   if(ccView==='month') _renderCCMonth(filtered);
   else _renderCCList(filtered);
+}
+
+function ccPrev(){if(ccView==='month')ccDate.setMonth(ccDate.getMonth()-1);else ccDate.setMonth(ccDate.getMonth()-1);renderCC();}
+
+function ccNext(){if(ccView==='month')ccDate.setMonth(ccDate.getMonth()+1);else ccDate.setMonth(ccDate.getMonth()+1);renderCC();}
+
+function ccSetView(v,btn){
+  ccView=v;
+  document.getElementById('cc-cal-wrap').style.display=v==='month'?'':'none';
+  document.getElementById('cc-list-wrap').style.display=v==='list'?'':'none';
+  document.querySelectorAll('#cc-view-month,#cc-view-list').forEach(b=>{b.style.background='';b.style.color='';b.classList.add('btn-ghost');b.classList.remove('btn-navy');});
+  btn.classList.remove('btn-ghost'); btn.style.background='var(--navy)'; btn.style.color='#fff';
+  renderCC();
 }
 
 function _renderCCMonth(evs){

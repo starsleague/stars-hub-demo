@@ -4,16 +4,6 @@
 if(!DB.coach_progressioni) DB.coach_progressioni=[];
 let activeCoachId=null, progGiocId=null;
 
-function setCoachTab(idx){
-  document.querySelectorAll('#coach-tabs .asd-tab').forEach((t,i)=>{t.classList.toggle('active',i===idx);});
-  ['coach-tab-0','coach-tab-1','coach-tab-2'].forEach((id,i)=>{
-    const el=document.getElementById(id); if(el) el.style.display=i===idx?'':'none';
-  });
-  if(idx===0) renderCoachHub();
-  if(idx===1) renderCoachProduttivita();
-  if(idx===2) renderCoachAllievi();
-}
-
 function renderCoachHub(){
   const grid=document.getElementById('coach-select-grid'); if(!grid)return;
   const coaches=DB.staff.filter(s=>s.tipo==='istruttore');
@@ -37,6 +27,16 @@ function renderCoachHub(){
       </div>
     </div>`;
   }).join('');
+}
+
+function setCoachTab(idx){
+  document.querySelectorAll('#coach-tabs .asd-tab').forEach((t,i)=>{t.classList.toggle('active',i===idx);});
+  ['coach-tab-0','coach-tab-1','coach-tab-2'].forEach((id,i)=>{
+    const el=document.getElementById(id); if(el) el.style.display=i===idx?'':'none';
+  });
+  if(idx===0) renderCoachHub();
+  if(idx===1) renderCoachProduttivita();
+  if(idx===2) renderCoachAllievi();
 }
 
 function selectCoach(id){activeCoachId=id;renderCoachHub();}

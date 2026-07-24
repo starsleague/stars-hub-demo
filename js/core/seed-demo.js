@@ -1,7 +1,5 @@
 // ============================================================
-// SEED DATI DEMO
-// I dataset statici stanno in data/seed-demo.json.
-// Qui resta solo la LOGICA di generazione.
+// SEED DATI DEMO — dataset in data/seed-demo.json
 // Uso da console:  await seedDemo(); location.reload();
 // ============================================================
 
