@@ -16,9 +16,22 @@ function updateSidebar() {
 
 function updateTopbar() {
   const d=new Date();
-  document.getElementById('topbarDate').innerHTML=d.toLocaleDateString('it-IT',{weekday:'long',day:'numeric',month:'long',year:'numeric'})+' &nbsp;&#183;&nbsp; <span style="color:var(--green);font-weight:500">&#9679; Online</span>';
+  const dt=document.getElementById('sb-date');
+  if(dt) dt.textContent=d.toLocaleDateString('it-IT',{day:'numeric',month:'short'});
+  const u=document.getElementById('sb-user');
+  if(u) u.textContent=currentUserName();
   renderWelcomeMessage();
 }
+
+// Nome dell'utente collegato. Provvisorio: finché non c'è login vero,
+// usa il primo utente con ruolo admin, poi il nome del centro.
+function currentUserName(){
+  if(DB.utente && DB.utente.nome) return DB.utente.nome;
+  const admin=(DB.utenti||[]).find(u=>u.ruolo==='admin');
+  if(admin) return admin.nome||admin.email||'Admin';
+  return 'Admin';
+}
+
 
 function renderWelcomeMessage(){
   const now  = new Date();
@@ -148,7 +161,7 @@ function nav(p,el){
   const pg=document.getElementById('page-'+p); if(pg) pg.classList.add('active');
   document.querySelectorAll('.ni').forEach(n=>n.classList.remove('active'));
   if(el&&el.classList&&el.classList.contains('ni')) el.classList.add('active');
-  document.getElementById('pageTitle').textContent=PTITLES[p]||p;
+  const pt=document.getElementById('pageTitle'); if(pt) pt.textContent=PTITLES[p]||p;
   if(p==='planner'||p==='home') { buildSportSelect(); renderPlanner(); updateKpi(); updateTopbar(); }
   if(p==='impostazioni') fillImpostazioni();
   if(p==='giocatori') renderGiocatori();

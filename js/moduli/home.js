@@ -151,11 +151,20 @@ function toggleWaitingPanel(){
   if(arrow) arrow.textContent = isOpen ? '▼ Mostra' : '▲ Nascondi';
   // Collassato: la colonna si restringe e lascia spazio al planner
   var grid = document.getElementById('home-live-grid');
-  if(grid) grid.style.gridTemplateColumns = isOpen ? '1fr 220px' : '2.2fr 1fr';
+  if(grid) grid.style.gridTemplateColumns = isOpen ? '1fr 150px' : '2.2fr 1fr';
   if(!isOpen) renderWaitingPren();
 }
 
+function updateWaitingCount(){
+  var n = DB.prenotazioni.filter(function(p){
+    return !p.campo_id || !p.inizio || !p.fine;
+  }).length;
+  var badge = document.getElementById('waiting-count');
+  if(badge){ badge.textContent = n; badge.style.display = n ? 'inline-flex' : 'none'; }
+}
+
 function renderWaitingPren(){
+  updateWaitingCount();
   var wrap = document.getElementById('waiting-pren-list');
   if(!wrap) return;
   wrap.innerHTML = '';
@@ -213,6 +222,7 @@ function renderWaitingPren(){
 }
 
 function renderCampiLive(){
+  if(typeof updateWaitingCount==='function') updateWaitingCount();
   var wrap = document.getElementById('campi-live-scroll');
   if(!wrap) return;
   wrap.innerHTML = '';

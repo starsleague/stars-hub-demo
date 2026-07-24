@@ -199,6 +199,25 @@
     <div class="sb-head">
       <div style="display:flex;align-items:center;gap:9px;margin-bottom:10px"><div class="sb-icon">&#11088;</div><div><div class="sb-name">Stars Hub</div><div class="sb-ver">Gestionale PSL</div></div></div>
       <div class="sb-club" onclick="nav('impostazioni',this)"><div class="sb-club-n" id="sb-club-n">Il tuo centro</div><div class="sb-club-s" id="sb-club-s">Impostazioni e configurazioni</div></div>
+      <!-- Stato + utente -->
+      <div style="margin-top:10px;padding:8px 10px;background:rgba(255,255,255,.04);border-radius:8px;font-size:11px;display:flex;flex-direction:column;gap:5px">
+        <div style="display:flex;align-items:center;gap:6px">
+          <span style="width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block;flex-shrink:0"></span>
+          <span style="color:var(--silver)">Online</span>
+          <span id="sb-date" style="margin-left:auto;color:var(--slate);font-size:10px"></span>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px;color:var(--slate)">
+          <span>&#128100;</span><span>Utente:</span>
+          <span id="sb-user" style="color:var(--silver);font-weight:600">&#8212;</span>
+        </div>
+      </div>
+      <!-- Chat + notifiche -->
+      <div style="margin-top:8px;display:flex;gap:8px">
+        <div onclick="nav('chat',null)" title="Chat"
+          style="flex:1;height:32px;border-radius:8px;background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;font-size:14px">&#128172;<div id="topbar-chat-dot" style="display:none;width:7px;height:7px;background:var(--gold);border-radius:50%;position:absolute;top:4px;right:6px"></div></div>
+        <div onclick="nav('notifiche',null)" title="Notifiche"
+          style="flex:1;height:32px;border-radius:8px;background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;font-size:14px">&#128276;<div id="topbar-notif-dot" style="width:7px;height:7px;background:var(--gold);border-radius:50%;position:absolute;top:4px;right:6px"></div></div>
+      </div>
     </div>
     <nav class="sb-nav">
       <div class="sb-grp-l">Principale</div>
@@ -229,19 +248,6 @@
     </div>
   </div>
   <div class="main">
-    <div class="topbar">
-      <div style="font-size:15px;font-weight:600;flex:1;display:flex;flex-direction:column;gap:1px">
-        <span id="pageTitle">Home</span>
-        <span id="topbarWelcome" style="font-size:11px;font-weight:500;color:var(--text3)"></span>
-      </div>
-      <div style="font-size:11px;color:var(--text3)" id="topbarDate"></div>
-      <div class="gap" style="margin-left:auto">
-        <!-- Chat nell'header -->
-        <div style="width:32px;height:32px;border-radius:8px;background:var(--bg);border:.5px solid var(--bdr);display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;font-size:14px" onclick="nav('chat',null)" title="Chat">&#128172;<div id="topbar-chat-dot" style="display:none;width:7px;height:7px;background:var(--gold);border-radius:50%;position:absolute;top:4px;right:4px;border:1.5px solid var(--surf)"></div></div>
-        <!-- Notifiche -->
-        <div style="width:32px;height:32px;border-radius:8px;background:var(--bg);border:.5px solid var(--bdr);display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;font-size:14px" onclick="nav('notifiche',null)" title="Notifiche">&#128276;<div id="topbar-notif-dot" style="width:7px;height:7px;background:var(--gold);border-radius:50%;position:absolute;top:4px;right:4px;border:1.5px solid var(--surf)"></div></div>
-      </div>
-    </div>
     <div class="content">
 <!-- HOME -->
 <div class="page active" id="page-home">
@@ -276,7 +282,7 @@
   </div>
 
   <!-- STATO CAMPI LIVE + PARTITE IN ATTESA -->
-  <div id="home-live-grid" style="display:grid;grid-template-columns:1fr 220px;gap:16px;align-items:start;margin-bottom:20px;transition:grid-template-columns .2s ease">
+  <div id="home-live-grid" style="display:grid;grid-template-columns:1fr 150px;gap:16px;align-items:start;margin-bottom:20px;transition:grid-template-columns .2s ease">
 
     <!-- Campi live -->
     <div>
@@ -296,6 +302,8 @@
         <span style="display:flex;align-items:center;gap:6px">
           <span style="width:8px;height:8px;border-radius:50%;background:var(--gold);display:inline-block"></span>
           Partite in attesa
+          <span id="waiting-count" style="background:var(--gold);color:#1E314A;font-size:10px;font-weight:800;
+            min-width:18px;height:18px;border-radius:9px;display:none;align-items:center;justify-content:center;padding:0 5px">0</span>
         </span>
         <span style="display:flex;align-items:center;gap:8px">
           <button type="button" onclick="event.stopPropagation();openWaitingPren()"
