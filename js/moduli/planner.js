@@ -412,6 +412,14 @@ function _loadGiocFromPren(p){
   });
 }
 
+function _fillPrenCampi(){
+  const sel=document.getElementById('pren-campo'); if(!sel) return;
+  const prev=sel.value;
+  sel.innerHTML='<option value="">&#8212; Da definire (lista attesa) &#8212;</option>'+
+    DB.campi.map(c=>`<option value="${c.id}">${c.nome} &#8212; ${c.sport}</option>`).join('');
+  if(prev) sel.value=prev;
+}
+
 function openNewPren(){
   editPrenId=null;
   document.getElementById('mPrenTitle').textContent='📅 Nuova prenotazione';
@@ -423,6 +431,7 @@ function openNewPren(){
   const pg=document.getElementById('pren-pagato'); if(pg) pg.value='da_pagare';
   ['pg1','pg2','pg3','pg4'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
   _resetGiocState();
+  _fillPrenCampi();
   const sel=document.getElementById('pren-campo'); if(sel) sel.value='';
   updatePrenDurata(); renderWaPreview(); renderGiocPicker(); openModal('modalPren');
 }
@@ -442,6 +451,7 @@ function openWaitingPren(){
 function editPren(id){
   const p=DB.prenotazioni.find(x=>x.id===id); if(!p) return;
   editPrenId=id;
+  _fillPrenCampi();
   document.getElementById('mPrenTitle').textContent='✏️ Modifica prenotazione';
   document.getElementById('pren-del-btn').style.display='';
   document.getElementById('pren-data').value=p.data;
