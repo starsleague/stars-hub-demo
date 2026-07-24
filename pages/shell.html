@@ -204,6 +204,7 @@
       <div class="sb-grp-l">Principale</div>
       <div class="ni active" onclick="nav('home',this)"><div class="ni-ic">&#127968;</div><div class="ni-lb">Home</div></div>
       <div class="ni" onclick="nav('tornei',this)"><div class="ni-ic">&#127942;</div><div class="ni-lb">Tornei ed Eventi</div></div>
+      <div class="ni" onclick="nav('classifiche',this)"><div class="ni-ic">&#127942;</div><div class="ni-t">Classifiche</div></div>
       <div class="ni" onclick="nav('corsi',this)"><div class="ni-ic">&#128218;</div><div class="ni-lb">Corsi e Lezioni</div></div>
       <div class="sb-grp-l">Centro Sportivo</div>
       <div class="ni" onclick="nav('campi',this)"><div class="ni-ic">&#127967;</div><div class="ni-lb">Campi</div></div>
@@ -222,7 +223,6 @@
       <div class="sb-grp-l">Business</div>
       <div class="ni" onclick="nav('cassa',this)"><div class="ni-ic">&#128176;</div><div class="ni-lb">Cassa</div></div>
       <div class="ni" onclick="nav('shop',this)"><div class="ni-ic">&#128722;</div><div class="ni-lb">Shop &amp; Stars Coin</div></div>
-      <div class="ni" onclick="nav('classifiche',this)"><div class="ni-ic">&#127942;</div><div class="ni-t">Classifiche</div></div>
       <div class="ni" onclick="nav('statistiche',this)"><div class="ni-ic">&#128200;</div><div class="ni-lb">Statistiche</div></div>
     </nav>
     <div class="sb-foot">
@@ -276,20 +276,14 @@
   </div>
 
   <!-- STATO CAMPI LIVE + PARTITE IN ATTESA -->
-  <div style="display:grid;grid-template-columns:2.2fr 1fr;gap:16px;align-items:start;margin-bottom:20px">
+  <div id="home-live-grid" style="display:grid;grid-template-columns:1fr 220px;gap:16px;align-items:start;margin-bottom:20px;transition:grid-template-columns .2s ease">
 
     <!-- Campi live -->
     <div>
-      <button type="button" onclick="toggleCampiLive()" id="campi-live-toggle-btn"
-        style="width:100%;display:flex;align-items:center;justify-content:space-between;
-        background:transparent;border:none;padding:0;margin-bottom:12px;cursor:pointer;
-        font-size:12px;font-weight:700;color:var(--text);text-align:left">
-        <span style="display:flex;align-items:center;gap:6px">
-          <span style="width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block;animation:pulse 2s infinite"></span>
-          Stato campi in tempo reale
-        </span>
-        <span id="campi-live-toggle-arrow" style="font-size:11px;color:var(--text3);font-weight:600">&#9660; Nascondi</span>
-      </button>
+      <div style="font-size:12px;font-weight:700;color:var(--text);margin-bottom:12px;display:flex;align-items:center;gap:6px">
+        <span style="width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block;animation:pulse 2s infinite"></span>
+        Stato campi in tempo reale
+      </div>
       <div id="campi-live-scroll" style="display:flex;flex-direction:column;gap:8px;font-size:92%"></div>
     </div>
 
@@ -317,7 +311,6 @@
   </div>
 
 
-  <div id="rk-popup" style="display:none"></div>
 
 </div>
 <!-- PLANNER -->
@@ -573,6 +566,7 @@
 
 <div class="page" id="page-classifiche">
   <div class="page-h"><div class="page-t">&#127942; Classifiche</div></div>
+  <div id="rk-popup" style="display:none"></div>
   <!-- CLASSIFICA (sinistra, collassabile) + RANKING/RANQUEEN (destra, collassabile) -->
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start">
     <div>

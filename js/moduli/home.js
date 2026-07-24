@@ -142,15 +142,6 @@ function renderHomeCalGrid(){
   }
 }
 
-function toggleCampiLive(){
-  var list  = document.getElementById('campi-live-scroll');
-  var arrow = document.getElementById('campi-live-toggle-arrow');
-  if(!list) return;
-  var isOpen = list.style.display !== 'none';
-  list.style.display = isOpen ? 'none' : 'flex';
-  if(arrow) arrow.innerHTML = isOpen ? '&#9654; Mostra' : '&#9660; Nascondi';
-}
-
 function toggleWaitingPanel(){
   var list  = document.getElementById('waiting-pren-list');
   var arrow = document.getElementById('waiting-toggle-arrow');
@@ -158,6 +149,9 @@ function toggleWaitingPanel(){
   var isOpen = list.style.display !== 'none';
   list.style.display = isOpen ? 'none' : 'flex';
   if(arrow) arrow.textContent = isOpen ? '▼ Mostra' : '▲ Nascondi';
+  // Collassato: la colonna si restringe e lascia spazio al planner
+  var grid = document.getElementById('home-live-grid');
+  if(grid) grid.style.gridTemplateColumns = isOpen ? '1fr 220px' : '2.2fr 1fr';
   if(!isOpen) renderWaitingPren();
 }
 
