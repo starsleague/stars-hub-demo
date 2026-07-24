@@ -1,0 +1,847 @@
+{
+  "campi": [
+    {
+      "id": 101,
+      "nome": "Padel 1 — Indoor",
+      "sport": "Padel",
+      "tipo": "Indoor",
+      "tariffa1": 16,
+      "t1s": "08:00",
+      "t1e": "18:00",
+      "tariffa2": 22,
+      "t2s": "18:00",
+      "t2e": "23:00",
+      "note": "Campo principale"
+    },
+    {
+      "id": 102,
+      "nome": "Padel 2 — Indoor",
+      "sport": "Padel",
+      "tipo": "Indoor",
+      "tariffa1": 16,
+      "t1s": "08:00",
+      "t1e": "18:00",
+      "tariffa2": 22,
+      "t2s": "18:00",
+      "t2e": "23:00",
+      "note": ""
+    },
+    {
+      "id": 103,
+      "nome": "Padel 3 — Outdoor",
+      "sport": "Padel",
+      "tipo": "Outdoor",
+      "tariffa1": 12,
+      "t1s": "08:00",
+      "t1e": "18:00",
+      "tariffa2": 16,
+      "t2s": "18:00",
+      "t2e": "23:00",
+      "note": "Campo verde"
+    },
+    {
+      "id": 104,
+      "nome": "Tennis A — Centrale",
+      "sport": "Tennis",
+      "tipo": "Indoor",
+      "tariffa1": 18,
+      "t1s": "08:00",
+      "t1e": "18:00",
+      "tariffa2": 24,
+      "t2s": "18:00",
+      "t2e": "23:00",
+      "note": "Resina"
+    },
+    {
+      "id": 105,
+      "nome": "Tennis B — Red",
+      "sport": "Tennis",
+      "tipo": "Outdoor",
+      "tariffa1": 14,
+      "t1s": "08:00",
+      "t1e": "18:00",
+      "tariffa2": 18,
+      "t2s": "18:00",
+      "t2e": "23:00",
+      "note": "Terra rossa"
+    },
+    {
+      "id": 106,
+      "nome": "Beach Tennis",
+      "sport": "Beach Tennis",
+      "tipo": "Outdoor",
+      "tariffa1": 10,
+      "t1s": "08:00",
+      "t1e": "20:00",
+      "tariffa2": 14,
+      "t2s": "20:00",
+      "t2e": "23:00",
+      "note": "Sabbia"
+    }
+  ],
+  "staff": [
+    {
+      "id": 201,
+      "nome": "Marco",
+      "cognome": "Ferri",
+      "tipo": "istruttore",
+      "sport": [
+        "Padel",
+        "Tennis"
+      ],
+      "email": "marco.ferri@padelbientina.it",
+      "tel": "+39 347 1112233",
+      "mansione": "",
+      "note": "Maestro FIT"
+    },
+    {
+      "id": 202,
+      "nome": "Sara",
+      "cognome": "Mancini",
+      "tipo": "istruttore",
+      "sport": [
+        "Padel"
+      ],
+      "email": "sara.mancini@padelbientina.it",
+      "tel": "+39 348 2223344",
+      "mansione": "",
+      "note": "Under 18"
+    },
+    {
+      "id": 203,
+      "nome": "Luca",
+      "cognome": "Bianchi",
+      "tipo": "istruttore",
+      "sport": [
+        "Tennis"
+      ],
+      "email": "luca.bianchi@padelbientina.it",
+      "tel": "+39 349 3334455",
+      "mansione": "",
+      "note": "Ex agonista"
+    },
+    {
+      "id": 204,
+      "nome": "Giulia",
+      "cognome": "Rossi",
+      "tipo": "istruttore",
+      "sport": [
+        "Beach Tennis",
+        "Padel"
+      ],
+      "email": "giulia.rossi@padelbientina.it",
+      "tel": "+39 345 4445566",
+      "mansione": "",
+      "note": "Beach cert."
+    },
+    {
+      "id": 205,
+      "nome": "Andrea",
+      "cognome": "Neri",
+      "tipo": "dipendente",
+      "sport": [],
+      "email": "andrea.neri@padelbientina.it",
+      "tel": "+39 346 5556677",
+      "mansione": "Receptionist / Cassa",
+      "note": "Turno mattina"
+    },
+    {
+      "id": 206,
+      "nome": "Valentina",
+      "cognome": "Conti",
+      "tipo": "dipendente",
+      "sport": [],
+      "email": "valentina.conti@padelbientina.it",
+      "tel": "+39 333 6667788",
+      "mansione": "Receptionist",
+      "note": "Turno sera"
+    },
+    {
+      "id": 207,
+      "nome": "Roberto",
+      "cognome": "Gallo",
+      "tipo": "dipendente",
+      "sport": [],
+      "email": "roberto.gallo@padelbientina.it",
+      "tel": "+39 340 7778899",
+      "mansione": "Manutenzione",
+      "note": ""
+    }
+  ],
+  "gRaw": [
+    [
+      "Alessio",
+      "Marchetti",
+      "Padel",
+      2.8
+    ],
+    [
+      "Claudia",
+      "Ferretti",
+      "Padel",
+      2.5
+    ],
+    [
+      "Davide",
+      "Lombardi",
+      "Padel",
+      3.2
+    ],
+    [
+      "Elena",
+      "Vitali",
+      "Padel",
+      2.2
+    ],
+    [
+      "Fabio",
+      "Rinaldi",
+      "Tennis",
+      3.8
+    ],
+    [
+      "Giada",
+      "Moretti",
+      "Tennis",
+      2.9
+    ],
+    [
+      "Matteo",
+      "Esposito",
+      "Padel",
+      2.6
+    ],
+    [
+      "Laura",
+      "Romano",
+      "Padel",
+      2.4
+    ],
+    [
+      "Nicola",
+      "De Luca",
+      "Tennis",
+      3.5
+    ],
+    [
+      "Paola",
+      "Gatti",
+      "Padel",
+      2
+    ],
+    [
+      "Stefano",
+      "Amato",
+      "Padel",
+      3
+    ],
+    [
+      "Francesca",
+      "Caruso",
+      "Beach Tennis",
+      2.7
+    ],
+    [
+      "Giorgio",
+      "Mazza",
+      "Padel",
+      2.3
+    ],
+    [
+      "Ilaria",
+      "Fontana",
+      "Tennis",
+      2.8
+    ],
+    [
+      "Lorenzo",
+      "Marini",
+      "Padel",
+      3.4
+    ],
+    [
+      "Maria",
+      "Pellegrini",
+      "Padel",
+      2.1
+    ],
+    [
+      "Antonio",
+      "Ferrari",
+      "Tennis",
+      4
+    ],
+    [
+      "Silvia",
+      "Barbieri",
+      "Padel",
+      2.5
+    ],
+    [
+      "Pietro",
+      "Colombo",
+      "Padel",
+      2.9
+    ],
+    [
+      "Chiara",
+      "Ricci",
+      "Beach Tennis",
+      2.3
+    ],
+    [
+      "Federico",
+      "Bruno",
+      "Padel",
+      3.1
+    ],
+    [
+      "Alessandra",
+      "Costa",
+      "Tennis",
+      2.6
+    ],
+    [
+      "Simone",
+      "Giordano",
+      "Padel",
+      2.7
+    ],
+    [
+      "Marta",
+      "Russo",
+      "Padel",
+      2.2
+    ],
+    [
+      "Emanuele",
+      "Poli",
+      "Tennis",
+      3.3
+    ],
+    [
+      "Roberta",
+      "Nardo",
+      "Beach Tennis",
+      2.4
+    ],
+    [
+      "Vincenzo",
+      "Gallo",
+      "Padel",
+      2.8
+    ],
+    [
+      "Beatrice",
+      "Monti",
+      "Padel",
+      2
+    ],
+    [
+      "Cristian",
+      "Villa",
+      "Tennis",
+      3.6
+    ],
+    [
+      "Noemi",
+      "Riva",
+      "Padel",
+      2.5
+    ]
+  ],
+  "abbonamenti_piani": [
+    {
+      "id": 1,
+      "nome": "Base",
+      "colore": "var(--silver)",
+      "prezzo": 29,
+      "benefici": [
+        "8 partite/mese",
+        "Prenotazione online"
+      ],
+      "attivo": true
+    },
+    {
+      "id": 2,
+      "nome": "Plus",
+      "colore": "var(--gold)",
+      "prezzo": 49,
+      "benefici": [
+        "Partite illimitate",
+        "1 corso incluso",
+        "Stars Coin x2"
+      ],
+      "attivo": true
+    },
+    {
+      "id": 3,
+      "nome": "Elite",
+      "colore": "var(--navy)",
+      "prezzo": 79,
+      "benefici": [
+        "Tutto incluso",
+        "Istruttore dedicato",
+        "Accesso tornei PSL"
+      ],
+      "attivo": true
+    }
+  ],
+  "eventi": [
+    {
+      "id": 601,
+      "nome": "⚡ Fast Cup Giugno",
+      "tipo": "fast",
+      "sport": "Padel",
+      "data_inizio": "2025-06-07",
+      "data_fine": "2025-06-08",
+      "campo_id": 101,
+      "max_partecipanti": 16,
+      "quota": 25,
+      "note": "Torneo a coppie miste. Premi per i primi 3 posti.",
+      "iscritti": [
+        {
+          "giocatore_id": 301,
+          "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 302,
+          "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 303,
+          "pagato": "saldato"
+        },
+        {
+          "giocatore_id": 304,
+          "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 307,
+          "pagato": "saldato"
+        },
+        {
+          "giocatore_id": 308,
+          "pagato": "saldato"
+        },
+        {
+          "giocatore_id": 310,
+          "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 311,
+          "pagato": "saldato"
+        },
+        {
+          "giocatore_id": 313,
+          "pagato": "saldato"
+        },
+        {
+          "giocatore_id": 315,
+          "pagato": "saldato"
+        },
+        {
+          "giocatore_id": 316,
+          "pagato": "saldato"
+        },
+        {
+          "giocatore_id": 318,
+          "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 319,
+          "pagato": "saldato"
+        },
+        {
+          "giocatore_id": 321,
+          "pagato": "saldato"
+        },
+        {
+          "giocatore_id": 323,
+          "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 324,
+          "pagato": "saldato"
+        }
+      ]
+    },
+    {
+      "id": 602,
+      "nome": "🎾 Tennis Open Estate",
+      "tipo": "open",
+      "sport": "Tennis",
+      "data_inizio": "2025-06-21",
+      "data_fine": "2025-06-22",
+      "campo_id": 104,
+      "max_partecipanti": 8,
+      "quota": 30,
+      "note": "Singolare maschile e femminile.",
+      "iscritti": [
+        {
+          "giocatore_id": 305,
+          "pagato": "saldato"
+        },
+        {
+          "giocatore_id": 306,
+          "pagato": "saldato"
+        },
+        {
+          "giocatore_id": 309,
+          "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 314,
+          "pagato": "saldato"
+        },
+        {
+          "giocatore_id": 317,
+          "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 322,
+          "pagato": "saldato"
+        },
+        {
+          "giocatore_id": 325,
+          "pagato": "saldato"
+        },
+        {
+          "giocatore_id": 329,
+          "pagato": "saldato"
+        }
+      ]
+    },
+    {
+      "id": 603,
+      "nome": "🏖️ Beach Summer Cup",
+      "tipo": "fast",
+      "sport": "Beach Tennis",
+      "data_inizio": "2025-07-05",
+      "data_fine": "2025-07-06",
+      "campo_id": 106,
+      "max_partecipanti": 12,
+      "quota": 20,
+      "note": "Torneo estivo. Aperitivo finale incluso!",
+      "iscritti": [
+        {
+          "giocatore_id": 312,
+          "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 320,
+          "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 326,
+          "pagato": "saldato"
+        }
+      ]
+    },
+    {
+      "id": 604,
+      "nome": "🏆 Campionato Interno Padel",
+      "tipo": "camp",
+      "sport": "Padel",
+      "data_inizio": "2025-07-12",
+      "data_fine": "2025-07-27",
+      "campo_id": 101,
+      "max_partecipanti": 24,
+      "quota": 35,
+      "note": "4 weekend, gironi + finale.",
+      "iscritti": [
+        {
+          "giocatore_id": 301,
+          "pagato": "saldato"
+        },
+        {
+          "giocatore_id": 302,
+          "pagato": "saldato"
+        },
+        {
+          "giocatore_id": 303,
+          "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 304,
+          "pagato": "saldato"
+        },
+        {
+          "giocatore_id": 307,
+          "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 308,
+          "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 310,
+          "pagato": "saldato"
+        },
+        {
+          "giocatore_id": 311,
+          "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 313,
+          "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 315,
+          "pagato": "saldato"
+        },
+        {
+          "giocatore_id": 316,
+          "pagato": "saldato"
+        },
+        {
+          "giocatore_id": 318,
+          "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 319,
+          "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 321,
+          "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 323,
+          "pagato": "saldato"
+        },
+        {
+          "giocatore_id": 324,
+          "pagato": "saldato"
+        }
+      ]
+    },
+    {
+      "id": 605,
+      "nome": "📚 Corso Padel Principianti Luglio",
+      "tipo": "corso",
+      "sport": "Padel",
+      "data_inizio": "2025-07-07",
+      "data_fine": "2025-07-28",
+      "campo_id": 102,
+      "max_partecipanti": 8,
+      "quota": 120,
+      "note": "4 lezioni ogni lunedì ore 10:00. Coach: Sara Mancini.",
+      "iscritti": [
+        {
+          "giocatore_id": 301,
+          "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 302,
+          "pagato": "saldato"
+        },
+        {
+          "giocatore_id": 303,
+          "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 304,
+          "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 305,
+          "pagato": "acconto"
+        },
+        {
+          "giocatore_id": 306,
+          "pagato": "acconto"
+        }
+      ]
+    }
+  ],
+  "fasceTurni": [
+    {
+      "sid": 205,
+      "fascia": "Mattina",
+      "oi": "07:30",
+      "of": "14:00"
+    },
+    {
+      "sid": 206,
+      "fascia": "Pomeriggio",
+      "oi": "14:00",
+      "of": "23:00"
+    },
+    {
+      "sid": 207,
+      "fascia": "Mattina",
+      "oi": "08:00",
+      "of": "16:00"
+    }
+  ],
+  "asd_bilancio": [
+    {
+      "id": 951,
+      "tipo": "entrata",
+      "data": "2025-01-15",
+      "importo": 900,
+      "categoria": "Quote associative",
+      "descrizione": "Quote soci fondatori (30 × €30)",
+      "metodo": "bonifico"
+    },
+    {
+      "id": 952,
+      "tipo": "entrata",
+      "data": "2025-06-01",
+      "importo": 600,
+      "categoria": "Quote associative",
+      "descrizione": "Rinnovi soci stagione estiva",
+      "metodo": "contanti"
+    },
+    {
+      "id": 953,
+      "tipo": "uscita",
+      "data": "2025-03-10",
+      "importo": 180,
+      "categoria": "Spese FITP",
+      "descrizione": "Affiliazione FITP 2025",
+      "metodo": "bonifico"
+    },
+    {
+      "id": 954,
+      "tipo": "uscita",
+      "data": "2025-04-01",
+      "importo": 95,
+      "categoria": "Spese operative",
+      "descrizione": "Assicurazione soci ASD",
+      "metodo": "bonifico"
+    },
+    {
+      "id": 955,
+      "tipo": "entrata",
+      "data": "2025-07-01",
+      "importo": 400,
+      "categoria": "Contributi",
+      "descrizione": "Contributo Comune attività sportiva",
+      "metodo": "bonifico"
+    }
+  ],
+  "asd_scadenze": [
+    {
+      "id": 961,
+      "titolo": "Rinnovo affiliazione FITP",
+      "data_scadenza": "2025-12-31",
+      "tipo": "FITP",
+      "descrizione": "Rinnovo annuale",
+      "stato": "in_corso"
+    },
+    {
+      "id": 962,
+      "titolo": "Versamento INPS istruttori",
+      "data_scadenza": "2025-07-16",
+      "tipo": "Fiscale",
+      "descrizione": "F24 contributi personale",
+      "stato": "in_corso"
+    },
+    {
+      "id": 963,
+      "titolo": "Assemblea ordinaria soci",
+      "data_scadenza": "2025-09-30",
+      "tipo": "",
+      "descrizione": "Approvazione bilancio 2025",
+      "stato": "in_corso"
+    },
+    {
+      "id": 964,
+      "titolo": "Rinnovo assicurazione impianti",
+      "data_scadenza": "2025-11-01",
+      "tipo": "Assicurazione",
+      "descrizione": "Polizza annuale",
+      "stato": "in_corso"
+    }
+  ],
+  "calendario_centro": [
+    {
+      "id": 1001,
+      "titolo": "Riunione staff mensile",
+      "tipo": "riunione",
+      "data": "2025-06-02",
+      "ora": "09:00",
+      "partecipanti": "Tutto lo staff",
+      "note": "Organizzazione tornei estate"
+    },
+    {
+      "id": 1002,
+      "titolo": "Manutenzione preventiva campi",
+      "tipo": "manutenzione",
+      "data": "2025-06-16",
+      "ora": "08:00",
+      "partecipanti": "Roberto Gallo",
+      "note": "Reti, illuminazione, manti"
+    },
+    {
+      "id": 1003,
+      "titolo": "Riunione staff mensile",
+      "tipo": "riunione",
+      "data": "2025-07-07",
+      "ora": "09:00",
+      "partecipanti": "Tutto lo staff",
+      "note": "Pianificazione agosto"
+    },
+    {
+      "id": 1004,
+      "titolo": "Pagamento stipendi giugno",
+      "tipo": "pagamento",
+      "data": "2025-06-27",
+      "ora": "",
+      "partecipanti": "",
+      "note": "Bonifici staff"
+    },
+    {
+      "id": 1005,
+      "titolo": "Pagamento stipendi luglio",
+      "tipo": "pagamento",
+      "data": "2025-07-27",
+      "ora": "",
+      "partecipanti": "",
+      "note": "Bonifici staff"
+    },
+    {
+      "id": 1006,
+      "titolo": "Corso aggiornamento istruttori FIT",
+      "tipo": "corso_agg",
+      "data": "2025-07-14",
+      "ora": "10:00",
+      "partecipanti": "Marco Ferri, Luca Bianchi",
+      "note": "Sede FIT Toscana, Pistoia"
+    }
+  ],
+  "PAGS": [
+    "saldato",
+    "saldato",
+    "saldato",
+    "acconto",
+    "da_pagare"
+  ],
+  "TIPI_P": [
+    "rank",
+    "rank",
+    "amich",
+    "amich",
+    "prenotato"
+  ],
+  "TIPI_T": [
+    "rank",
+    "amich",
+    "corso",
+    "prenotato"
+  ],
+  "TIPI_B": [
+    "amich",
+    "rank",
+    "prenotato"
+  ],
+  "METODI": [
+    "contanti",
+    "carta",
+    "contanti",
+    "carta",
+    "bonifico"
+  ]
+}

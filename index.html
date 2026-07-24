@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stars Hub — Gestionale PSL</title>
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!-- Il markup vive in pages/shell.html e viene iniettato qui. -->
+<div id="app-shell"></div>
+<div class="toast" id="toast"></div>
+
+<script>
+// ============================================================
+// BOOTSTRAP
+// Carica shell.html, poi i moduli JS nell'ORDINE dichiarato.
+// L'ordine conta: db.js definisce DB/saveDB/nid usati da tutti,
+// init.js chiude la sequenza e avvia l'app.
+// ============================================================
+const MODULES = [
+  // --- core: fondamenta ---
+  'js/core/db.js',
+  'js/core/ui.js',
+  'js/core/wizard.js',
+  'js/core/app-init.js',
+
+  // --- moduli funzionali ---
+  'js/moduli/planner.js',
+  'js/moduli/home.js',
+  'js/moduli/home-planner.js',
+  'js/moduli/ranking.js',
+  'js/moduli/eventi.js',
+  'js/moduli/campi.js',
+  'js/moduli/giocatori.js',
+  'js/moduli/staff-todo.js',
+  'js/moduli/turni.js',
+  'js/moduli/shop.js',
+  'js/moduli/chat.js',
+  'js/moduli/cassa.js',
+  'js/moduli/abbonamenti.js',
+  'js/moduli/impostazioni.js',
+  'js/moduli/notifiche.js',
+  'js/moduli/kpi.js',
+  'js/moduli/statistiche.js',
+  'js/moduli/ruoli.js',
+  'js/moduli/iscrizioni.js',
+  'js/moduli/coach-hub.js',
+  'js/moduli/feedback.js',
+
+  // --- modulo ASD ---
+  'js/asd/asd.js',
+  'js/asd/asd-home.js',
+  'js/asd/calendario.js',
+  'js/asd/assemblee.js',
+
+  // --- seed demo: caricato ma non eseguito (si invoca a mano) ---
+  'js/core/seed-demo.js',
+
+  // --- init: SEMPRE per ultimo, avvia l'app ---
+  'js/core/init.js'
+];
+
+function loadScript(src) {
+  return new Promise((ok, ko) => {
+    const s = document.createElement('script');
+    s.src = src;
+    s.onload = ok;
+    s.onerror = () => ko(new Error('Impossibile caricare ' + src));
+    document.body.appendChild(s);
+  });
+}
+
+(async function boot() {
+  try {
+    const shell = await fetch('pages/shell.html').then(r => {
+      if (!r.ok) throw new Error('shell.html non trovato (HTTP ' + r.status + ')');
+      return r.text();
+    });
+    document.getElementById('app-shell').innerHTML = shell;
+
+    for (const m of MODULES) await loadScript(m);
+
+    if (typeof initApp === 'function') initApp();
+    else console.warn('initApp() non definita — controlla js/core/init.js');
+  } catch (err) {
+    console.error('[BOOT]', err);
+    document.body.insertAdjacentHTML('afterbegin',
+      '<pre style="background:#e05a2b;color:#fff;padding:16px;margin:0;font:13px monospace">' +
+      'Avvio fallito: ' + err.message +
+      '\n\nRicorda: serve un server locale (npx serve .), non file://</pre>');
+  }
+})();
+</script>
+</body>
+</html>
